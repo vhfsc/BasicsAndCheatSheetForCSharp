@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Vitor Carvalho">
+    <title>Introdução a C# & ASP.NET MVC </title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <section>
+                    <h3>Comentários</h3>
+                    <pre><code class="csharp hljs">
+    //comentários no c# sao realizados de 2 maneiras com as duas barras para a direita
+    public class Pessoa
+    {
+        private string _nome="";
+        //Construtor da class Pessoa
+        public Pessoa()
+        {}
+        //Construtor da class Pessoa com o nome da pessoa
+        public Pessoa(string nome)
+        {
+            _nome = nome;
+        }
+                        </code></pre>
+                    <pre><code class="csharp hljs">
+    /*
+    ou então quando queremos comentar varias linhas podemos usar assim  
+    Atalhos : CTRL+K+C  e para descomentar CTRL+K+U
+    Estes atalhos podem ser configurados em Tools>Options>Environment>Keyboard
+    */
+        public string Nome
+        {
+            get { return _nome; }
+            set{ _nome=value;}
+        }
+    }
+</code></pre>
+                </section>
+                <section>
+                    <h3>Comentários Extra</h3>
+                    <pre><code class="csharp hljs">
+                        //TODO : Ao colocar a palavra chave TODO o VS 
+                        //vai adicionar a lista de tarefas (View > Task List) o item 
+                        </code>
+</pre>
+                    <img data-src="./images/TodoList.png" alt="task list">
+                </section>
+            </section>
+            <section>
+                <h3>Tipos de Dados</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Intervalo</th>
+                            <th>Exemplos</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>int</td>
+                            <td> Numeros inteiros</td>
+                            <td>-2,147,483,648 a 2,147,483,647</td>
+                            <td>7, 80, 5188</td>
+                        </tr>                      
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+        // More info about config & dependencies:
+        // - https://github.com/hakimel/reveal.js#configuration
+        // - https://github.com/hakimel/reveal.js#dependencies
+        Reveal.initialize({
+            dependencies: [
+                { src: 'plugin/markdown/marked.js' },
+                { src: 'plugin/markdown/markdown.js' },
+                { src: 'plugin/notes/notes.js', async: true },
+                { src: 'plugin/highlight/highlight.js', async: true },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+
+            ],
+            width: '100%',
+            height: '100%'
+
+        });
+    </script>
+</body>
+</html>
+
+
